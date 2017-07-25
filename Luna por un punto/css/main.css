@@ -1,0 +1,440 @@
+html {
+  font-size: 16px;
+  font-family: arial; }
+
+body {
+background-image:url(../imagenes/fondo_listo.png);
+	max-width:100%; /*para que la imagen se ajuste a la pantalla*/
+	max-height:100%;
+	/*webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    /*filter: grayscale(100%);
+*/}
+.container {
+  width: 95rem;
+  height: 37rem;
+  margin:0 auto; 
+  }
+
+.moon {
+   border-radius: 50%;
+  position: absolute;
+  margin:7rem 48rem; /*muestra la posicion donde va asomar*/
+  transform: scale(2.5); /*aumenta el tamaño de la luna*/
+  animation-name: scale;
+  filter:contrast(150%);
+  animation-play-state:running; /*hace que la imagen camine*/
+  animation-duration: 8s; }
+  
+  .moon::before {
+    /*content: "" ; /*muestra el texto con la imagen*/
+/*22222*/
+margin: 0.5rem 0 0 1rem;
+}
+.moon::after {
+	
+	/*33333*/
+    border-radius: 50%;
+    position: absolute;
+    margin: 1rem 0 0 1rem; }
+
+@keyframes scale {
+0%{
+    transform: scale(0.8);
+    filter: contrast(30%);
+	}
+ 100%{
+    transform: scale(2.5);
+    filter: contrast(250%); } 
+	}
+	
+@keyframes rotating {
+    
+    from{
+    transform: rotate(0deg);
+    }
+    to{
+    transform: rotate(360deg);
+    }
+    }
+.rotating {
+    -webkit-animation: rotating 7s;
+}
+
+img{/*para dar propiedades a las imagenes*/
+    opacity:0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+
+}
+
+/*para hacer que rote una vez la imagen*/
+#luna{
+	width:85.625px;
+	height:81.25px;
+	-webkit-animation:rotate 10s ease-in-out;
+}
+
+
+#luna:hover{
+	 -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(1.5)
+}
+@-webkit-keyframes rotate
+{
+	0%{-webkit-transform:rotateZ(-360deg);/*rota de izquirda aderecha*/
+	}
+	100%{-webkit-transform:rotateA(0deg);
+	}
+}
+/*para hacer que rote una vez la imagen*/
+
+#nube1,#nube2{
+	width:106.43px; /*aumento en 30*/
+	height:80.37px;
+	border-radius: 75%;
+}
+#nube1:hover{
+	 -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(1.5);
+}
+#nube2:hover{
+	 -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(1.5);
+}
+
+	
+.nube_uno,.nube_dos {
+ 
+  border-radius: 2rem;
+  position: absolute;
+  -webkit-animation: 8s  infinite linear;
+  
+  /*animation:infinite linear*/}
+
+.nube_uno::before, .nube_dos::before {
+ 
+ /*5555*/
+  border-radius: 2rem;
+  position: absolute; }
+
+.nube_uno {
+  margin: 7rem 0 0 0.5rem;
+  animation-name: nubes_uno;
+  animation-play-state: running;
+  animation-direction:alternate-reverse;
+  animation-timing-funtion:linear;
+
+  }
+  
+  .nube_uno::before {
+    margin: 4rem 0 0 15rem; }
+
+@keyframes nubes_uno{
+  from {
+    margin: 2.56rem 0 0 35.45rem; }
+  to {
+    margin: 10rem 0 0 65rem; 
+		-webkit-transform:rotateY(180deg);
+	} 
+	}
+.nube_dos {
+
+  margin: 7rem 0 0 0.5rem;
+  position: absolute;
+  animation-name: nubes_dos;
+  animation-play-state: running;
+  animation-direction:alternate-reverse;
+  animation-timing-funtion:linear;}
+  .nube_dos::before {
+      margin: 20rem 0 0 8rem; }
+
+@keyframes nubes_dos {
+  from { /*donde emopieza*/
+    margin: 3.4rem 0 0 65rem; }
+  to {/*donde finaliza*/
+    margin: 10rem 0 0 13rem; 
+	-webkit-transform:rotateY(180deg);} 
+	}
+	
+
+	
+	
+	
+/*transicion para las aves*/
+#ave{
+    width:85.625px;
+	height:81.25px;
+	opacity:100;
+	/*-webkit-animation: volar 10s alternate  infinite;
+	
+    filter: alpha(opacity=50);
+    */
+}
+#ave:hover{
+	 -webkit-transform: scale(1.5);
+    transform: scale(1.5)
+}
+
+.ave1{
+ 
+  border-radius: 4rem;
+  position: absolute;
+  -webkit-animation: volar 10s infinite;
+  
+  /*animation:infinite linear*/}
+
+@-webkit-keyframes volar{
+0% { /*donde emopieza*/
+    margin: 38.90rem 0 0 20.5rem; }
+  50% {/*donde finaliza*/
+    margin: 7.5rem 0 0 48.9rem; 
+	-webkit-transform:rotateY(180deg);
+	visibility:50%;
+	}
+	
+	}
+	
+
+/*max-width: 100%; /*para que la imagen se ajuste a la pantalla*/
+  /*  height: auto;
+
+/*transicion para las aves*/
+	
+	
+footer{
+margin:auto;
+margin-right:auto;
+		padding-top:25px;
+	color:#fff;
+    padding-top: 25px;
+	
+	
+}
+.tex, h2{
+ position: absolute;
+    border-radius: 0px 0px 5px 5px;
+    width: 100%;
+    height: 25px;
+    padding-top: 2px;
+    background-color: rgb(24,24,24); /* es para navegadores antiguos */
+    background-color: rgba(24,24,24,1); /* el 0.8 en nuevos navegadores es la opacidad*/
+	opacity:0.5;
+    font-size: 1em;
+font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+text-align:center;
+animation-name: animaciontext;
+animation-duration:5s;
+animation-iteration-count:normal;
+animation-timing-function:linear;
+}
+@-webkit-keyframes animaciontext{
+from{transform: scale(.4,.4)}
+to{transform:scale(1,2);}
+20%{opacity:1;
+max-height:100%,}
+
+}
+
+
+
+
+
+/*para la creacion de la particula*/
+/*.particula{
+width:50px;
+height:50px;
+position:absolute;
+left:50%;
+top:50%;
+margin-left:-25px;
+margin-top:-25px;
+background-color:#FFFFFF;
+opacity:0px;
+}
+.animacionparticula{
+animation-name: animacion;
+animation-duration:2s;
+animation-iteration-count:infinite;
+animation-timing-function:linear;
+}
+@-webkit-keyframes animacion{
+from{transform: scale(.5,.5)}
+to{transform:scale(2,2) translateY(-100px);}
+20%{opacity:1;}
+
+}
+
+
+/*creacion de Estrellas*/
+.estrella{
+	width: 1px;
+	height: 1px;
+	/*background:url(../imagenes/burbuja.png);
+	*/
+	/*background: rbga(#4078A0, #214154, #13242F,.3);*/
+	background:#FFFFFF;/*se puede poner imagen*/
+	opacity:1;
+	position:absolute;
+	border-radius:50%;
+	
+}
+.primera{
+	
+	top:20%;
+	left: 70%;
+}
+.segunda{
+	
+	top:33.5%;
+	margin-right: 33.5%;
+}
+.tercera{
+	
+	top:51.5%;
+	left:64.4%;
+}
+.cuarta{
+	
+	top:20%;
+	left:50%;
+	
+}
+.quinta{
+	
+	top:25%;
+	left:45%;
+}
+.sexta{
+	
+	top:5.5%;
+	left:21%;
+	
+}
+.septima{
+	
+	top:34%;
+	left:46%;
+}
+.octava{
+	
+	top:32.45%;
+	left:39%;
+}
+.novena{
+	
+	top:32.8%;
+	left:-25%;
+}
+.decima{
+	
+	top:13%;
+	left:70.5%;
+}
+.uno{
+
+top: 1%;
+left: 77%;
+
+}
+.dos{
+top:5%;
+left:20%;
+}
+
+.tres{
+top:13%;
+left:26%;
+}
+.cuatro{
+top:15%;
+left:46%;
+}
+.cinco{
+top:17%;
+left:30%;
+}
+.seis{
+top:16%;
+left:33.5%;
+}
+.siete{
+top:25.6%;
+left:31.23%;
+}
+.ocho{
+top:12.5%;
+left:54.3%;
+}
+.nueve{
+top:8.3%;
+left:75.87%;
+}
+
+.diez{
+top:16.64%;
+right: :5.8%;
+}
+/*me selecciona los pares*/
+.estrella:nth-child(2n){
+	animation-name:estrella-par ;
+animation-duration:2s;
+animation-iteration-count:infinite;
+/*animation-timing-function:linear;
+*/}
+@keyframes estrella-par{
+	0% , 90%{ box-shadow: 0 0 3px 3px  /*rgba(#4078A0, #214154, #13242F,.3);*/rgba(255,255,255,.3);
+	}
+	
+	100%{
+		/*blanco y opacidad*/
+box-shadow: 0 0 16px 16px rgba(255,255,255,.3);
+/*box-shadow: 0 0 5px 5px rgba(255,255,255,.3);
+	/*background:-webkit-radial-gradient(#4078A0, #214154, #13242F);/**/
+	/*background-size:cover;*/
+
+		}
+}
+/*selecciona los impares*/
+.estrella:nth-child(2n+1){
+animation-name:estrella-impar;
+animation-duration:2s;
+animation-iteration-count:infinite;
+/*animation-timing-function:linear;
+
+*/}
+
+@-webkit-keyframes estrella-impar{
+	0% , 35%, 50%{ 
+		box-shadow: 0 0 3px 3px  /*rgba(#4078A0, #214154, #13242F,.3);*/rgba(255,255,255,.3);
+	}
+	
+	45%{
+		/*blanco y opacidad*/
+box-shadow: 0 0 16px 16px rgba(255,255,255,.3);
+/*box-shadow: 0 0 5px 5px rgba(255,255,255,.3);
+	/*background:-webkit-radial-gradient(#4078A0, #214154, #13242F);/**/
+	/*background-size:cover;*/
+
+		}
+}
+
+/*#video{
+position:fixed;
+top:0;
+left:0;
+min-height:100%;
+min-width:100%;
+width:auto;
+height:auto;
+z-index:-10;
+visibility:visible;
+
+*/*}*/
